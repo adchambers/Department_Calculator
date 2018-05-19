@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane minHeight="439.0" minWidth="650.0" prefHeight="444.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.Controller">
+    <children>
+        <Button fx:id="addButton" layoutX="83.0" layoutY="153.0" mnemonicParsing="false" onAction="#AddEmployee" text="Add Employee" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="firstNameTextField" layoutX="83.0" layoutY="43.0" minHeight="25.0" minWidth="150.0" AnchorPane.leftAnchor="83.0" />
+        <TextField fx:id="lastNameTextField" layoutX="83.0" layoutY="80.0" minHeight="25.0" minWidth="150.0" AnchorPane.leftAnchor="83.0" />
+        <ComboBox fx:id="titleComboBox" layoutX="83.0" layoutY="117.0" minHeight="25.0" minWidth="150.0" AnchorPane.leftAnchor="83.0" />
+        <Label text="Add Employee" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" left="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutX="2.0" layoutY="37.0" text="First Name" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding></Label>
+        <Label layoutX="11.0" layoutY="74.0" text="Last Name" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding></Label>
+        <Label layoutX="10.0" layoutY="111.0" text="Title" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding></Label>
+        <Label layoutX="364.0" text="Department Employees" underline="true" AnchorPane.leftAnchor="364.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <TableView fx:id="employeeTableView" editable="true" layoutX="364.0" layoutY="43.0" prefHeight="351.0" prefWidth="348.0">
+        </TableView>
+        <Separator layoutX="10.0" layoutY="178.0" prefHeight="30.0" prefWidth="328.0" AnchorPane.leftAnchor="10.0" />
+        <Button fx:id="removeButton" layoutX="364.0" layoutY="404.0" mnemonicParsing="false" onAction="#RemoveEmployee" text="Remove Employee" />
+        <Label layoutX="15.0" layoutY="193.0" text="Department Summary" underline="true" AnchorPane.leftAnchor="0.0">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" left="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutY="398.0" text="Total Wages:" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutY="268.0" text="Assistant Manager(s):" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutY="305.0" text="QA Tester(s):" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutY="342.0" text="Developer(s):" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="assignedAManagersLabel" layoutX="193.0" layoutY="269.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="assignedQATestersLabel" layoutX="193.0" layoutY="306.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="assignedDevelopersLabel" layoutX="193.0" layoutY="343.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutX="55.0" layoutY="230.0" text="Employee Title" textAlignment="RIGHT" AnchorPane.leftAnchor="0.0">
+            <padding>
+                <Insets bottom="10.0" left="15.0" top="10.0" />
+            </padding>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="193.0" layoutY="230.0" text="Assigned" textAlignment="RIGHT">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label layoutX="263.0" layoutY="230.0" text="Wages Sum " textAlignment="RIGHT">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="wagesDevelopersLabel" layoutX="263.0" layoutY="341.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="wagesQATestersLabel" layoutX="263.0" layoutY="304.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="wagesAManagersLabel" layoutX="263.0" layoutY="267.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="wagesTotalLabel" layoutX="263.0" layoutY="398.0" text="--">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Separator layoutX="16.0" layoutY="379.0" prefHeight="30.0" prefWidth="328.0" />
+    </children>
+</AnchorPane>
